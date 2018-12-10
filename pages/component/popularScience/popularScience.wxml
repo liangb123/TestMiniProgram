@@ -1,0 +1,12 @@
+<!--pages/component/popularScience/popularScience.wxml-->
+<view>
+  <view class='cardView' wx:for="{{array}}" bindtap="tapName" id='{{index}}' wx:key='{{key}}'>
+    <view class='libiary'>
+      <image class='kpImage' mode='scaleToFill' src='{{item.healthImgs[0]}}' onerror='errorFunction' data-errorimg="{{index}}"></image>
+      <view class='contentView'>
+        <text class='title'>{{item.title}}</text>
+        <text class='name'>{{item.creatorName}}</text>
+      </view>
+    </view>
+  </view>
+</view>

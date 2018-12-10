@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/mine/personalCenter/personalCenter",
+    "pages/mine/medicalScience/medicalScience",
+    "pages/component/VideoListView",
+    "pages/mine/liveVideo/liveVideo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#eeeeee",
+    "navigationBarBackgroundColor": "#27ad9a",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/index/homeUnSelected.png",
+        "selectedIconPath": "pages/index/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/mine/mineUnSelected.png",
+        "selectedIconPath": "pages/mine/mineSelected.png"
+      }
+    ],
+    "color": "#999999",
+    "selectedColor": "#27ad9a"
+  }
+}

@@ -1,0 +1,65 @@
+.mineHeaderView {
+  background-color: #27ad9a;
+  height: 100px;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.userRole {
+  font-size: 9px;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 10px/50%;
+  margin-left: 20rpx;
+  padding: 0rpx  20rpx;
+}
+
+.personalimage {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 14px;
+}
+
+.QRImage {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.ArrowImage {
+  width: 10px;
+  height: 15px;
+  margin-right: 14px;
+}
+
+.textContainerView {
+  margin-left: 14px;
+  flex: 2;
+}
+
+.userName {
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  margin-top: 20px;
+}
+
+.userHospital {
+  font-size: 12px;
+  color: white;
+}
+
+.useerNameView {
+  flex: 2;
+}
+
+.userHospitalView {
+  flex: 2;
+}
+
+.listLable {
+}

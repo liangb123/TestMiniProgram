@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "VideoListView": "../../pages/component/VideoListView",
+    "popularScience":"../../pages/component/popularScience/popularScience"
+  }
+}

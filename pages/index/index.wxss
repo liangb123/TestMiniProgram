@@ -1,0 +1,69 @@
+/**index.wxss**/
+
+/* const bannerHeight: wx.getSystemInfoSync().windowWidth * 0.56; */
+
+.bannerBG {
+  width: 100%;
+  height: 0px;
+/* 16:9padding-bottom:65.25%，4:3padding-bottom:75% */
+  padding-bottom: 40%;
+  position: relative;
+}
+
+.homeBanner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.familyDocView {
+  display: flex;
+  margin: 10px;
+  background-color: rosybrown;
+  border-radius: 6px;
+}
+
+.docHeaderImage {
+  display: flex;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.userRole {
+  font-size: 9px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px/50%;
+  margin-left: 10rpx;
+  padding: 0rpx  20rpx;
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.btn1 {
+  align-self: center;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70rpx;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "科普列表",
+  "navigationBarBackgroundColor": "#27ad9a",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "popularScience": "../../../pages/component/popularScience/popularScience"
+  }
+}

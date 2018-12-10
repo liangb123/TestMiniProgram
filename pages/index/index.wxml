@@ -1,0 +1,34 @@
+<!--index.wxml-->
+
+<view>
+  <view class='bannerBG'>
+    <image class='homeBanner' mode='scaleToFill' src='{{bannerImage}}'></image>
+  </view>
+  <view class='familyDocView'>
+    <image class='docHeaderImage' src='../mine/headerIMG.jpeg'></image>
+    <view class='textContent'>
+      <view class='fiestLine' style='display:flex; align-items:center;'>
+        <text style='font-size: 15px;'>我的顾问</text>
+        <text class='userRole'>HIM</text>
+      </view>
+      <view class='secondLine'>
+        <text style='font-size: 13px;'>医院
+          </text>
+      </view>
+    </view>
+    <button class='btn1' open-type='openSetting'>
+      <image class='btnImg' src='mineCaseIcon.png'></image>
+      <view style='font-size: 14px;'>我的咨询</view>
+    </button>
+  </view>
+  <view style='height:30px; display:flex; align-items:center'>
+    <view style='background-color:#27ad9a; height:20px; width:20rpx; margin-left:10px'></view>
+    <text style='margin-left:10px;'>医学讲堂</text>
+  </view>
+  <VideoListView data='{{videoData}}'></VideoListView>
+  <view style='height:30px;display:flex;align-items:center'>
+    <view style='background-color:#27ad9a; height:20px; width:20rpx; margin-left:10px'></view>
+    <text style='margin-left:10px;'>医学科普</text>
+  </view>
+  <popularScience data='{{scienceData}}'></popularScience>
+</view>

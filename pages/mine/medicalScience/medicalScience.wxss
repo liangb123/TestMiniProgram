@@ -1,0 +1,36 @@
+/* pages/mine/medicalScience/medicalScience.wxss */
+
+.cardView{
+margin-left: 14rpx;
+margin-right: 14rpx;
+background-color: #e8e8e8;
+border-radius: 6px;
+}
+
+.kpImage{
+  width: 280rpx;
+  height: 180rpx;
+  flex: 1;
+  /* margin-bottom: 10px;
+  margin-top: 10px; */
+}
+
+.libiary{
+  display: flex;
+}
+
+.contentView{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 14rpx;
+  flex:2;
+}
+
+.title{
+  font-size: 16px;
+}
+
+.name{
+font-size: 14px;
+}
