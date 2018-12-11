@@ -79,13 +79,14 @@ Page({
       mask: true,
     })
   },
-
+  
   ckilcScienceItem(event) {
+    const that = this;
     var id = event.detail.id;
-    wx.showToast({
-      title: '点击第'+id+'个i科普',
-      icon:'succes',
-      mask: true
+    var newsId = that.data.scienceData[id].newsId;
+    var linkUrl = encodeURIComponent(`http://zaq12wsxcde3.dazhuanjia.net/edu/news/view/${newsId}?pusherName=大专家.COM&pushType=PLATFORM&isPlain=true&pushId=358`)
+    wx.navigateTo({
+      url: `../webview/webView?linkUrl=${linkUrl}`
     })
   },
   getUserInfo: function(e) {

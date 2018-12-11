@@ -5,7 +5,8 @@
     "pages/mine/personalCenter/personalCenter",
     "pages/mine/medicalScience/medicalScience",
     "pages/component/VideoListView",
-    "pages/mine/liveVideo/liveVideo"
+    "pages/mine/liveVideo/liveVideo",
+    "pages/webview/webView"
   ],
   "window": {
     "backgroundTextStyle": "light",

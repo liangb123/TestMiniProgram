@@ -45,7 +45,6 @@ Component({
       };
     },
     tapName(event){
-      console.log('dd',event)
       var myEventDetail = {
         id: event.currentTarget.dataset.id
       }

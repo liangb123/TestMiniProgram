@@ -68,13 +68,8 @@ Page({
     console.log(item.text)
   },
   tapName: function(event) {
-    console.log(event)
     const aaaaa = this;
     var index = event.currentTarget.id;
-    console.log(index)
-    let titleStr = this.data.array[index].title;
-    console.log(titleStr);
-   
     switch (index) {
       case '0':
         console.log('进到0')

@@ -1,0 +1,4 @@
+<!--pages/webview/webView.wxml-->
+<view>
+<web-view src="{{linkUrkl}}" />
+</view>
