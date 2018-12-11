@@ -25,10 +25,10 @@
     <view style='background-color:#27ad9a; height:20px; width:20rpx; margin-left:10px'></view>
     <text style='margin-left:10px;'>医学讲堂</text>
   </view>
-  <VideoListView data='{{videoData}}'></VideoListView>
+  <VideoListView data='{{videoData}}' bind:parentEvent='onParentEvent'></VideoListView>
   <view style='height:30px;display:flex;align-items:center'>
     <view style='background-color:#27ad9a; height:20px; width:20rpx; margin-left:10px'></view>
     <text style='margin-left:10px;'>医学科普</text>
   </view>
-  <popularScience data='{{scienceData}}'></popularScience>
+  <popularScience data='{{scienceData}}' bind:clickVideoItem='ckilcScienceItem'></popularScience>
 </view>

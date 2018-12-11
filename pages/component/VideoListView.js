@@ -7,7 +7,7 @@ Component({
     data: {
       type: Object,
       value: [],
-      observer: function (newVal, oldVal) {
+      observer: function(newVal, oldVal) {
         this.resetRight(newVal);
       }
     },
@@ -17,7 +17,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    array:[],
+    array: [],
     defaultImg: "../../pages/mine/medicalScience/default_img.png",
   },
 
@@ -45,5 +45,15 @@ Component({
         })
       };
     },
+    clickVideoItem: function(event) {
+      // detail对象，提供给事件监听函数
+      var myEventDetail = {
+        id: event.currentTarget.dataset.id
+      }
+      // 触发事件的选项
+      var myEventOption = {}
+      // 使用 triggerEvent 方法触发自定义组件事件，指定事件名、detail对象和事件选项
+      this.triggerEvent('parentEvent', myEventDetail, myEventOption)
+    }
   }
 })

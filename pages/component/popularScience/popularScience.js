@@ -35,7 +35,6 @@ Component({
       })
     },
     errorFunction(e) {
-      console.log('dasdsada');
       if (e.type == "error") {
         var errorImgIndex = e.target.dataset.errorimg; //获取错误图片循环的下标
         var imgList = this.data.array;　　　　　　　 //将图片列表数据绑定到变量
@@ -45,6 +44,14 @@ Component({
         })
       };
     },
+    tapName(event){
+      console.log('dd',event)
+      var myEventDetail = {
+        id: event.currentTarget.dataset.id
+      }
+      var myEventOption = {};
+      this.triggerEvent('clickVideoItem',myEventDetail,myEventOption)
+    }
   }
 })
 
