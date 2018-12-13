@@ -43,7 +43,7 @@ Page({
       // },
       header: {
         'content-type': 'application/json',
-        'token': app.globalData.token,
+        'token': wx.getStorageSync("token"),
       },
       success(res) {
         var ddd = res.data.data;
@@ -74,25 +74,25 @@ Page({
       case '0':
         console.log('进到0')
         wx.navigateTo({
-          url: '../mine/personalCenter/personalCenter?userId=' + titleStr
+          url: '../mine/personalCenter/personalCenter'
         })
         break;
       case '1':
         console.log('进到1')
         wx.navigateTo({
-          url: '../mine/medicalScience/medicalScience?userId=' + titleStr
+          url: '../mine/medicalScience/medicalScience'
         })
         break;
       case '2':
         console.log('进到0')
         wx.navigateTo({
-          url: '../mine/liveVideo/liveVideo?userId=' + titleStr
+          url: '../mine/liveVideo/liveVideo'
         })
         break;
       case '3':
         console.log('进到3')
         // wx.navigateTo({
-        //   url: '../mine/personalCenter/personalCenter?userId=' + titleStr
+        //   url: '../mine/personalCenter/personalCenter'
         // })
         break;
       default:
@@ -106,6 +106,7 @@ Page({
     wx.showToast({
       title: "点击headerview",
       duration: 2000,
+      icon: 'none'
     })
   }
 })

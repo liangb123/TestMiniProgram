@@ -22,7 +22,7 @@ Page({
         url: 'https://zaq12wsxcde3.dazhuanjia.net/blobstore/video/list/v2?videoTypeTag=MEDICAL_POPULARITY&sortBy=CREATE_TIME_DESC&offset=0&limit=3',
         header: {
           'content-type': 'application/json',
-          'token': app.globalData.token
+          'token': wx.getStorageSync("token")
         },
         success(res) {
           if (res.data.message) {
@@ -50,7 +50,7 @@ Page({
         url: 'https://zaq12wsxcde3.dazhuanjia.net/bdc/health_medical_popular/patient/list?status=APPROVED&offset=0&limit=3',
         header: {
           'content-type': 'application/json',
-          'token': app.globalData.token,
+          'token': wx.getStorageSync("token"),
         },
         success(res) {
           var dataSource = res.data.data;
@@ -73,13 +73,11 @@ Page({
   onParentEvent: function(event) {
     // 自定义组件触发事件时提供的detail对象，用来获取子组件传递来的数据
     var id = event.detail.id;
-    wx.showToast({
-      title: '点击第' + id + '个视频',
-      icon: 'succes',
-      mask: true,
+    wx.navigateTo({
+      url: '../mine/personalCenter/personalCenter'
     })
   },
-  
+
   ckilcScienceItem(event) {
     const that = this;
     var id = event.detail.id;
@@ -89,8 +87,33 @@ Page({
       url: `../webview/webView?linkUrl=${linkUrl}`
     })
   },
-  getUserInfo: function(e) {
-    console.log('useruser');
+  onGotUserInfo(res) {
+    wx.showLoading({
+      title: '登录中'
+    })
+    console.log(res.detail)
+    console.log(res.detail.errMsg)
+    if (res.detail.errMsg == 'getUserInfo:ok') {
+      this.setUserInfoAndNext(res)
+    } else {
+      wx.hideLoading()
+    }
+  },
+
+  setUserInfoAndNext(res) {
+    // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    // 所以此处加入 callback 以防止这种情况
+    if (this.userInfoReadyCallback) {
+      this.userInfoReadyCallback(res)
+    }
+    console.log('chenggong  chenggong ')
+    wx.hideLoading()
+    // 跳转首页
+    setTimeout(() => {
+      wx.reLaunch({
+        url: '../index/index'
+      })
+    }, 1000)
   },
 
   onShareAppMessage: function(love) {

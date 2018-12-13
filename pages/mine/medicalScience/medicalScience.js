@@ -22,13 +22,15 @@ Page({
 
   loadData: function(e, f) {
     const ccc = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     var urlStr = 'https://zaq12wsxcde3.dazhuanjia.net/bdc/health_medical_popular/patient/list?status=APPROVED&offset=' + e + '&limit=' + f;
-
     wx.request({
       url: urlStr,
       header: {
         'content-type': 'application/json',
-        'token': app.globalData.token,
+        'token': wx.getStorageSync("token"),
       },
 
       success(res) {
@@ -64,6 +66,10 @@ Page({
             hasMoreData: hasMoreData,
           })
         }
+        wx.hideLoading();
+      },
+      fail(res){
+        wx.hideLoading();
       }
     })
   },
@@ -117,7 +123,8 @@ Page({
       this.loadData(this.data.offset, 10)
     } else {
       wx.showToast({
-        title: '没有更多数据了'
+        title: '没有更多数据了',
+        icon:'none'
       })
     }
   },

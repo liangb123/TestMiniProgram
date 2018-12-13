@@ -16,9 +16,9 @@
           </text>
       </view>
     </view>
-    <button class='btn1' open-type='openSetting'>
+    <button class='btn1' open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">
       <image class='btnImg' src='mineCaseIcon.png'></image>
-      <view style='font-size: 14px;'>我的咨询</view>
+      <view style='font-size: 14px;'>模拟登陆</view>
     </button>
   </view>
   <view style='height:30px; display:flex; align-items:center'>
