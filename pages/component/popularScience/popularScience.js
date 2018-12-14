@@ -44,12 +44,15 @@ Component({
         })
       };
     },
+    
     tapName(event){
+      console.log(event.currentTarget.dataset.id)
+
       var myEventDetail = {
         id: event.currentTarget.dataset.id
       }
       var myEventOption = {};
-      this.triggerEvent('clickVideoItem',myEventDetail,myEventOption)
+      this.triggerEvent('ckilcScienceItem',myEventDetail,myEventOption)
     }
   }
 })

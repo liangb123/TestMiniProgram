@@ -1,10 +1,16 @@
 <!--index.wxml-->
-
 <view>
   <view class='bannerBG'>
     <image class='homeBanner' mode='scaleToFill' src='{{bannerImage}}'></image>
   </view>
-  <view class='familyDocView'>
+  <view class='noFamilyDocView' style='display:{{showNoCounselor}}'>
+    <text class='noSignText'>您还没有健康顾问</text>
+    <button class='btn2' open-type='openSetting' lang="zh_CN" bindtap="gotoSign">
+      <image class='btnImg' src='mineCaseIcon.png'></image>
+      <view style='font-size: 14px;'>前去关联</view>
+    </button>
+  </view>
+  <view class='familyDocView' style='display:{{showCounselor}}'>
     <image class='docHeaderImage' src='../mine/headerIMG.jpeg'></image>
     <view class='textContent'>
       <view class='fiestLine' style='display:flex; align-items:center;'>
@@ -30,5 +36,6 @@
     <view style='background-color:#27ad9a; height:20px; width:20rpx; margin-left:10px'></view>
     <text style='margin-left:10px;'>医学科普</text>
   </view>
-  <popularScience data='{{scienceData}}' bind:clickVideoItem='ckilcScienceItem'></popularScience>
+  <popularScience data='{{scienceData}}' bind:ckilcScienceItem='ckilcScienceItem'></popularScience>
+
 </view>

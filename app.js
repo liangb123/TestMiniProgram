@@ -27,12 +27,29 @@ App({
           var ddd = res.data.data;
           console.log(ddd);
           wx.setStorageSync("token", ddd)
+          // that.setUserInfoAndNext(res)
         }
       },
       fail(res) {
         console.log(res);
       }
     })
+  },
+
+  setUserInfoAndNext(res) {
+    // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    // 所以此处加入 callback 以防止这种情况
+    if (this.userInfoReadyCallback) {
+      this.userInfoReadyCallback(res)
+    }
+    console.log('chenggong  chenggong ')
+    wx.hideLoading()
+    // 跳转首页
+    setTimeout(() => {
+      wx.reLaunch({
+        url: '../index/index'
+      })
+    }, 1000)
   },
   
   onShow: function(options) {

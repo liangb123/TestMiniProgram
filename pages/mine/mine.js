@@ -1,4 +1,3 @@
-import userModel from "../model/userModel.js";
 const app = getApp()
 
 Page({
@@ -23,7 +22,7 @@ Page({
         image: '../index/homeSelected.png'
       },
       {
-        title: "更多",
+        title: "webview测试",
         image: '../index/homeSelected.png'
       },
       {
@@ -49,7 +48,6 @@ Page({
         var ddd = res.data.data;
         console.log(ddd);
         var nameStr = ddd['name'];
-        // var user =new userModel(ddd);
         var role = ddd['tags'][0];
         var hospitalStr = ddd['hospitalName'];
         var imageUrl = app.globalData.baseUrl.imageUrl + ddd['headImg'] + '?x-oss-process=image/resize,h_240,limit_0,x-oss-process=image/crop,h_200,x-oss-process=image/circle,r_100/format,png';
@@ -91,12 +89,16 @@ Page({
         break;
       case '3':
         console.log('进到3')
-        // wx.navigateTo({
-        //   url: '../mine/personalCenter/personalCenter'
-        // })
+        var linkUrl = encodeURIComponent(`http://zaq12wsxcde3.dazhuanjia.net/edu/news/view/1128?pusherName=大专家.COM&pushType=PLATFORM&isPlain=true&pushId=358`)
+        wx.navigateTo({
+          url: `../webview/webView?linkUrl=${linkUrl}`
+        })
         break;
       default:
-        console.log('进到default')
+        wx.showToast({
+          title: '点击最后一栏',
+          icoc: 'none'
+        })
     }
 
   },

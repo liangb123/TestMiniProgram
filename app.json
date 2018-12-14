@@ -6,7 +6,8 @@
     "pages/mine/medicalScience/medicalScience",
     "pages/component/VideoListView",
     "pages/mine/liveVideo/liveVideo",
-    "pages/webview/webView"
+    "pages/webview/webView",
+    "pages/common/scienceDetail/scienceDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

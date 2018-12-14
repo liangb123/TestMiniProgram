@@ -1,0 +1,27 @@
+<!--pages/common/scienceDetail/scienceDetail.wxml-->
+<view class='BGView'>
+  <view class='headerBG'>
+    <view class='titleBG'>
+      <text class='titleLable'>{{scienceData.newsTitle}}</text>
+      <text class='tagLable'>原创</text>
+    </view>
+    <view class='authorBG'>
+      <view class='firstLine'>
+        <text class='creatTime'>作者:</text>
+        <text class='creatTime'>{{scienceData.owner.name}}</text>
+        <text class='creatTime'>推荐人:</text>
+        <text class='creatTime'>大专家.COM</text>
+      </view>
+      <text class='creatTime'>{{scienceData.createdTime}}</text>
+    </view>
+  </view>
+  <import src="../../wxParse/wxParse.wxml" />
+  <view class='wxParse'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view>
+     <button class='btn' open-type='openSetting' lang="zh_CN" bindtap="voteAction">
+      <image class='btnImg' src='{{voteImage}}' mode='aspectFit'></image>
+    </button>
+  </view>
+</view>

@@ -1,6 +1,7 @@
 // pages/mine/medicalScience/medicalScience.js
 const app = getApp()
 
+
 Page({
   /**
    * 页面的初始数据
@@ -71,6 +72,15 @@ Page({
       fail(res){
         wx.hideLoading();
       }
+    })
+  },
+
+  ckilcScienceItem(event) {
+    var id = event.detail.id;
+    var newsId = this.data.array[id].newsId;
+
+    wx.navigateTo({
+      url: `../../common/scienceDetail/scienceDetail?newsId=${newsId}`
     })
   },
 

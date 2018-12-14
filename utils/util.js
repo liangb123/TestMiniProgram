@@ -17,6 +17,11 @@ const convertUTCTimeToLocalTime = UTCDateString =>{
   return dateStr;
 }
 
+const clearNilStr = currentText =>{
+  return  currentText||'';
+}
+
 module.exports = {
-  formatTime: convertUTCTimeToLocalTime
+  formatTime: convertUTCTimeToLocalTime,
+  // clearNilStr: clearNilStr
 }

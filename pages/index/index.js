@@ -9,6 +9,8 @@ Page({
     bannerImage: './kaifeier.jpg',
     videoData: [],
     scienceData: [],
+    showCounselor:'none',
+    showNoCounselor:'flex'
   },
   onTabItemTap(item) {
     console.log(item.index)
@@ -19,7 +21,7 @@ Page({
   onLoad: function() {
     const ccc = this;
     wx.request({
-        url: 'https://zaq12wsxcde3.dazhuanjia.net/blobstore/video/list/v2?videoTypeTag=MEDICAL_POPULARITY&sortBy=CREATE_TIME_DESC&offset=0&limit=3',
+        url: 'https://zaq12wsxcde3.dazhuanjia.net/blobstore/video/list/v2?videoTypeTag=MEDICAL_POPULARITY&sortBy=CREATE_TIME_DESC&offset=9&limit=3',
         header: {
           'content-type': 'application/json',
           'token': wx.getStorageSync("token")
@@ -54,11 +56,10 @@ Page({
         },
         success(res) {
           var dataSource = res.data.data;
-          console.log('dataSource', dataSource);
           if (dataSource) {
             for (var i = 0; i < dataSource.length; i++) {
               var item = dataSource[i];
-              var imageUrl = item.healthImgs == null ? 'dakdjsakl' : ccc.data.imageSrc + item.healthImgs[0]
+              var imageUrl = item.healthImgs == null ? 'dakdjsakl' : app.globalData.baseUrl.imageUrl + item.healthImgs[0]
               item.healthImgs = [imageUrl]
             }
             ccc.setData({
@@ -82,9 +83,8 @@ Page({
     const that = this;
     var id = event.detail.id;
     var newsId = that.data.scienceData[id].newsId;
-    var linkUrl = encodeURIComponent(`http://zaq12wsxcde3.dazhuanjia.net/edu/news/view/${newsId}?pusherName=大专家.COM&pushType=PLATFORM&isPlain=true&pushId=358`)
     wx.navigateTo({
-      url: `../webview/webView?linkUrl=${linkUrl}`
+      url: `../common/scienceDetail/scienceDetail?newsId=${newsId}`
     })
   },
   onGotUserInfo(res) {
@@ -114,6 +114,14 @@ Page({
         url: '../index/index'
       })
     }, 1000)
+  },
+
+  gotoSign(){
+    console.log('dddd')
+    this.setData({
+      showCounselor: 'flex',
+      showNoCounselor: 'none'
+    })
   },
 
   onShareAppMessage: function(love) {

@@ -1,4 +1,4 @@
 <!--pages/mine/medicalScience/medicalScience.wxml-->
 <view>
-   <popularScience data='{{array}}'></popularScience>
+   <popularScience data='{{array}}' bind:ckilcScienceItem='ckilcScienceItem'></popularScience>
 </view>
