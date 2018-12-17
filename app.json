@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/mine/personalCenter/personalCenter",
     "pages/mine/medicalScience/medicalScience",
     "pages/component/VideoListView",
     "pages/mine/liveVideo/liveVideo",
     "pages/webview/webView",
-    "pages/common/scienceDetail/scienceDetail"
+    "pages/common/scienceDetail/scienceDetail",
+    "pages/mine/videoDetail/videoDetail",
+    "pages/mine/personalCenter/personalCenter"
   ],
   "window": {
     "backgroundTextStyle": "light",

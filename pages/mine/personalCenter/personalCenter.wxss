@@ -1,36 +1,18 @@
 /* pages/mine/personalCenter/personalCenter.wxss */
-@import "../../lib/weui.wxss";
 
-.weui-cells{
-  margin-top: 80rpx;
-  text-align: left;
-}
-.weui-label{
-  width: 5em;
-}
-
-.page-body-button {
-  margin-bottom: 30rpx;
+.container-box {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-page {
-  background-color: #F8F8F8;
-  height: 100%;
-  font-size: 32rpx;
-  line-height: 1.6;
-}
-
-.page-body {
-  padding: 20rpx 0;
-}
-
-.btn-area{
-  margin-top: 60rpx;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0 30rpx;
-}
-
-.tc{
-  text-align: center;
+.logoQRCode {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 150px;
 }

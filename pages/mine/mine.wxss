@@ -60,6 +60,3 @@
 .userHospitalView {
   flex: 2;
 }
-
-.listLable {
-}

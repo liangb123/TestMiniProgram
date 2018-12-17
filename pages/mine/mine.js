@@ -72,7 +72,7 @@ Page({
       case '0':
         console.log('进到0')
         wx.navigateTo({
-          url: '../mine/personalCenter/personalCenter'
+          url: '../mine/videoDetail/videoDetail'
         })
         break;
       case '1':
@@ -105,10 +105,13 @@ Page({
 
 
   clickHeaderview: function(event) {
-    wx.showToast({
-      title: "点击headerview",
-      duration: 2000,
-      icon: 'none'
+    // wx.showToast({
+    //   title: "点击headerview",
+    //   duration: 2000,
+    //   icon: 'none'
+    // })
+    wx.navigateTo({
+      url: './personalCenter/personalCenter'
     })
   }
 })

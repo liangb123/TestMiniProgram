@@ -27,8 +27,7 @@
   border: 1rpx solid #f29054;
   border-radius: 10px/50%;
   margin-left: 10px;
-  padding: 3rpx 10rpx 3rpx 10rpx;
-  margin-bottom: 2rpx;
+  padding: 3px 10rpx 3px 10rpx;
 }
 
 .creatTime {
@@ -48,11 +47,10 @@
   overflow: hidden;
   align-content: center;
   margin-top: 30px;
-  border: 1rpx solid #e8e8e8;
 }
 
-.btt::after {
-  border: 1rpx solid #e8e8e8;
+.btn::after{
+  border: 0;
 }
 
 .btnImg {

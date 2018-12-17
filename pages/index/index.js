@@ -74,8 +74,9 @@ Page({
   onParentEvent: function(event) {
     // 自定义组件触发事件时提供的detail对象，用来获取子组件传递来的数据
     var id = event.detail.id;
+    console.log('dddd',id)
     wx.navigateTo({
-      url: '../mine/personalCenter/personalCenter'
+      url: '../mine/videoDetail/videoDetail'
     })
   },
 

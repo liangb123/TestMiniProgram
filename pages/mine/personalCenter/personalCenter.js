@@ -1,51 +1,70 @@
 // pages/mine/personalCenter/personalCenter.js
-function getRandomColor() {
-  const rgb = []
-  for (let i = 0; i < 3; ++i) {
-    let color = Math.floor(Math.random() * 256).toString(16)
-    color = color.length == 1 ? '0' + color : color
-    rgb.push(color)
-  }
-  return '#' + rgb.join('')
-}
+var QRCodeJS = require('../../../utils/qrcode/qrcode.js')
+
 
 Page({
-  onReady: function (res) {
-    this.videoContext = wx.createVideoContext('myVideo')
-  },
-  inputValue: '',
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    startTime: 10,
-    src: '',
-    danmuList:
-      [{
-        text: '第 1s 出现的弹幕',
-        color: '#ff0000',
-        time: 1
-      },
-      {
-        text: '第 3s 出现的弹幕',
-        color: '#ff00ff',
-        time: 3
-      }]
+    dataSource:['个人主页','个人简介','邀请医生'],
+    srcListArrow:'../rightArrow.png'
   },
-  bindInputBlur: function (e) {
-    this.inputValue = e.detail.value
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    QRCodeJS.qrApi.draw('https://www.baidu.com', 'logoQRCode', 234, 234, null,'../headerIMG.jpeg');
   },
-  bindSendDanmu: function () {
-    this.videoContext.sendDanmu({
-      text: this.inputValue,
-      color: getRandomColor()
-    })
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
   },
-  bindPlay: function () {
-    this.videoContext.play()
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
   },
-  bindPause: function () {
-    this.videoContext.pause()
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
   },
-  videoErrorCallback: function (e) {
-    console.log('视频错误信息:')
-    console.log(e.detail.errMsg)
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })
