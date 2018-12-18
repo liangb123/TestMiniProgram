@@ -5,7 +5,7 @@ Page({
     userName: '大专家',
     userHospital: '上海长江医院',
     userRole: 'HIM',
-    src: './headerIMG.jpeg',
+    src: './medicalScience/default_img.png',
     srcQR: './mineQRCode.png',
     srcArrow: './mineArrow.png',
     srcListArrow: './rightArrow.png',

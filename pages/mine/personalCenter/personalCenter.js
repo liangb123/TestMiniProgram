@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    QRCodeJS.qrApi.draw('https://www.baidu.com', 'logoQRCode', 234, 234, null,'../headerIMG.jpeg');
+    QRCodeJS.qrApi.draw('https://www.baidu.com', 'logoQRCode', 234, 234, null,null);
   },
 
   /**

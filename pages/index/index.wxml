@@ -11,7 +11,7 @@
     </button>
   </view>
   <view class='familyDocView' style='display:{{showCounselor}}'>
-    <image class='docHeaderImage' src='../mine/headerIMG.jpeg'></image>
+    <image class='docHeaderImage' src='../mine/medicalScience/default_img.png'></image>
     <view class='textContent'>
       <view class='fiestLine' style='display:flex; align-items:center;'>
         <text style='font-size: 15px;'>我的顾问</text>

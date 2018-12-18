@@ -6,11 +6,11 @@ const util = require('../../utils/util.js')
 Page({
   data: {
     familyDocInfo: {},
-    bannerImage: './kaifeier.jpg',
+    bannerImage: '',
     videoData: [],
     scienceData: [],
-    showCounselor:'none',
-    showNoCounselor:'flex'
+    showCounselor: 'none',
+    showNoCounselor: 'flex'
   },
   onTabItemTap(item) {
     console.log(item.index)
@@ -68,13 +68,32 @@ Page({
           }
         }
       })
+
+    wx.request({
+      url: 'https://zaq12wsxcde3.dazhuanjia.net/bdc/banner/info?area=PATIENT_BANNER',
+      header: {
+        'content-type': 'application/json',
+        'token': wx.getStorageSync("token"),
+      },
+      success(res) {
+        var dataSource = res.data.data;
+        if (dataSource) {
+          var item = dataSource[0];
+          var imageUrl = item.smallScreen == null ? '../mine/medicalScience/default_img.png' : item.smallScreen;
+          ccc.setData({
+            bannerImage: imageUrl,
+          })
+        }
+      }
+    })
+
   },
 
   // 当自定义组件触发 parentEvent 事件时，调用 onParentEvent 方法
   onParentEvent: function(event) {
     // 自定义组件触发事件时提供的detail对象，用来获取子组件传递来的数据
     var id = event.detail.id;
-    console.log('dddd',id)
+    console.log('dddd', id)
     wx.navigateTo({
       url: '../mine/videoDetail/videoDetail'
     })
@@ -117,7 +136,7 @@ Page({
     }, 1000)
   },
 
-  gotoSign(){
+  gotoSign() {
     console.log('dddd')
     this.setData({
       showCounselor: 'flex',
