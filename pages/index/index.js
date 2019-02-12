@@ -107,6 +107,7 @@ Page({
       url: `../common/scienceDetail/scienceDetail?newsId=${newsId}`
     })
   },
+  
   onGotUserInfo(res) {
     wx.showLoading({
       title: '登录中'
@@ -142,6 +143,10 @@ Page({
       showCounselor: 'flex',
       showNoCounselor: 'none'
     })
+  },
+
+  launchAppError(e) {
+    console.log(e.detail.errMsg)
   },
 
   onShareAppMessage: function(love) {

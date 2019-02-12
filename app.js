@@ -33,7 +33,15 @@ App({
       fail(res) {
         console.log(res);
       }
+    }),
+
+    wx.getSetting({
+      success(res) {
+        console.log('ddddd', res.authSetting['scope.userInfo'])
+      }
     })
+
+
   },
 
   setUserInfoAndNext(res) {
@@ -60,6 +68,7 @@ App({
     userInfo: null,
     baseUrl: {
       imageUrl: 'http://dzj-test.img-cn-shanghai.aliyuncs.com/',
-    }
+    },
+    // defaultImg:'/pages/'
   },
 })

@@ -5,7 +5,7 @@
   </view>
   <view class='noFamilyDocView' style='display:{{showNoCounselor}}'>
     <text class='noSignText'>您还没有健康顾问</text>
-    <button class='btn2' open-type='openSetting' lang="zh_CN" bindtap="gotoSign">
+    <button class='btn2'  bindtap='gotoSign'>
       <image class='btnImg' src='mineCaseIcon.png'></image>
       <view style='font-size: 14px;'>前去关联</view>
     </button>

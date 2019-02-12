@@ -1,4 +1,6 @@
 <!--pages/webview/webView.wxml-->
-<view>
+<view class='BGView'>
 <web-view src="{{linkUrkl}}" />
+<view class='shareView'>
+</view>
 </view>

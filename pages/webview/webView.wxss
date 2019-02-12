@@ -1,1 +1,9 @@
 /* pages/webview/webView.wxss */
+
+.shareView{
+  background-color: red;
+  height: 45px;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+}

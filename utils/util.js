@@ -23,5 +23,5 @@ const clearNilStr = currentText =>{
 
 module.exports = {
   formatTime: convertUTCTimeToLocalTime,
-  // clearNilStr: clearNilStr
+  clearNilStr: clearNilStr
 }

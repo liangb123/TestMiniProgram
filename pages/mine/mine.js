@@ -16,7 +16,8 @@ Page({
       {
         title: "科普刷新加载",
         image: '../index/homeSelected.png'
-      },
+      }, errorFunction
+      
       {
         title: "测试直播场景",
         image: '../index/homeSelected.png'
